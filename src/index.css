@@ -1,13 +1,84 @@
 body {
+  background-image: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVkZ2V0JTIwcGxhbm5lciUyMG1vbmV5fGVufDB8fDB8fHww');
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.expense-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  animation: fadeInUp 0.5s ease; /* Animation for form wrapper */
 }
+
+.expense-form-wrapper form {
+  margin-bottom: 0;
+}
+
+.expense-form-wrapper .form-group {
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for deleting expense confirmation message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delete-confirmation {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease forwards; /* Animation to fade in */
+}
+
+.delete-confirmation p {
+  margin-bottom: 10px;
+}
+
+.confirm-buttons {
+  margin-top: 10px;
+}
+
+.confirm-buttons button {
+  margin-right: 10px;
+}
+
+@keyframes moveTitle {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.movingTitle {
+  animation: moveTitle 2s infinite;
+}
+
