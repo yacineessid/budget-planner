@@ -33,7 +33,7 @@ function ExpenseList({ expenses, deleteExpense }) {
             <div>
               <div className="d-flex align-items-center">
                 <span className="mr-2">{expense.name}</span>
-                <span className="badge badge-primary badge-pill">${expense.amount.toFixed(2)}</span>
+                <span className="badge badge-primary badge-pill">{expense.amount.toFixed(2)}$</span>
               </div>
               <div className="text-muted">{new Date(expense.date).toLocaleDateString()}</div>
             </div>
