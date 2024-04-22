@@ -32,8 +32,7 @@ function ExpenseList({ expenses, deleteExpense }) {
           <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
             <div>
               <div className="d-flex align-items-center">
-                <span className="mr-2">{expense.name}</span>
-                <span className="badge badge-primary badge-pill">${expense.amount.toFixed(2)}</span>
+                <span className="mr-2">{expense.name}: {expense.amount.toFixed(2)}$</span>
               </div>
               <div className="text-muted">{new Date(expense.date).toLocaleDateString()}</div>
             </div>
